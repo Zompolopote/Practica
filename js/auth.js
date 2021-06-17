@@ -51,13 +51,13 @@ registro.on('click', function(){
     if(!validateEmail(emailValidate)){
         error += '<p>Ingrese un mail valido</p>'
     }
-    console.log(error);
 
     if(error!=""){
         alert_error.html(error)
         alert_error.show()
     }else{
         alert_error.hide()
+        add(nombreValidate, emailValidate, passValidate);
     }
 })
 
