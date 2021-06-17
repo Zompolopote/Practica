@@ -6,28 +6,29 @@ const email = $("#email");
 const email_login = $("#email_login");
 const registro = $("#registro");
 const alert_error = $("#alert_error");
+const alert_error_login = $("#alert_error_login");
 const login = $("#login");
 
 login.on('click', function(){
 
-    const emailValidate = email_login.val();
-    const passValidate = pass_login.val();
+    const emailValidateLogin = email_login.val();
+    const passValidateLogin = pass_login.val();
 
     var error = ""
     
-    if(!validateEmail(emailValidate)){
+    if(!validateEmail(emailValidateLogin)){
         error += '<p>Ingrese un mail valido</p>'
     }
-    if(passValidate.length<6){
+    if(passValidateLogin.length<6){
         error += '<p>La contraseña debe tener al menos 6 caracteres</p>'
     }
     console.log(error);
 
     if(error!=""){
-        alert_error.html(error)
-        alert_error.show()
+        alert_error_login.html(error)
+        alert_error_login.show()
     }else{
-        alert_error.hide()
+        alert_error_login.hide()
     }     
     }
 )
